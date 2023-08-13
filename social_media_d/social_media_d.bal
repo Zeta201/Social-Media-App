@@ -1,8 +1,8 @@
 import ballerina/http;
 import ballerina/log;
 
-http:Client sentimentEndpoint = check new ("http://localhost:9099/text-processing"
-);
+configurable string sentiment_api_uri = ?;
+http:Client sentimentEndpoint = check new (sentiment_api_uri);
 
 @http:ServiceConfig {
     cors: {
