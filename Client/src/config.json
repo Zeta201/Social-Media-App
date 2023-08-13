@@ -1,0 +1,7 @@
+{
+  "REACT_APP_SOCIAL_MEDIA_URL": "https://2893d9fe-d60c-448e-829e-d9a0777ec712-dev.e1-us-east-azure.choreoapis.dev/ifsh/social-media-app/text-processing-8aa/1.0.0",
+  "REACT_APP_SIGN_IN_REDIRECT_URL": "https://255fa86d-5f23-48dd-8122-54c6ee6f88cf.e1-us-east-azure.choreoapps.dev",
+  "REACT_APP_SIGN_OUT_REDIRECT_URL": "https://255fa86d-5f23-48dd-8122-54c6ee6f88cf.e1-us-east-azure.choreoapps.dev",
+  "REACT_APP_CLIENT_ID": "bWxg3R3rUXU6pr7_vgEoQVAxpXga",
+  "REACT_APP_BASE_URL": "https://api.asgardeo.io/t/orgmw3o0"
+}
