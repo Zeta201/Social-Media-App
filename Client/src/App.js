@@ -9,17 +9,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route
           path="/"
-          element={
-            state.isAuthenticated ? (
-              <Navigate to="/dashboard" />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
+          element={state.isAuthenticated ? <Dashboard /> : <Login />}
         ></Route>
       </Routes>
     </div>
