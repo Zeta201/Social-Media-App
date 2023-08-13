@@ -4,15 +4,6 @@ import ballerina/log;
 configurable string sentiment_api_uri = ?;
 http:Client sentimentEndpoint = check new (sentiment_api_uri);
 
-@http:ServiceConfig {
-    cors: {
-        allowOrigins: ["*"],
-        allowCredentials: true,
-        // allowHeaders: ["*"],
-        allowMethods: ["*"]
-    }
-}
-
 service /social on new http:Listener(9090) {
     public function init() returns error? {
         log:printInfo("Social Media Service Started...");
