@@ -6,7 +6,7 @@ http:Client sentimentEndpoint = check new (sentiment_api_uri);
 
 @http:ServiceConfig {
     cors: {
-        allowOrigins: ["http://localhost:3000"],
+        allowOrigins: ["*"],
         allowCredentials: true,
         // allowHeaders: ["*"],
         allowMethods: ["*"]
