@@ -13,7 +13,7 @@ let axiosConfig = {
 // });
 
 export const getAllUsers = () => API.get("/sentiment/hello-api", axiosConfig);
-
+export const getGreet = () => API.get("/greet", axiosConfig);
 // const fetchUsers = () => {
 //   fetch("http://localhost:9090/social/sentiment/hello-api", {
 //     method: "GET",

@@ -4,6 +4,8 @@ import { useAuthContext } from "@asgardeo/auth-react";
 
 function Dashboard() {
   const [users, setUsers] = useState(null);
+  const [greet, setGreet] = useState("");
+
   const { signOut } = useAuthContext();
   const fetchUsers = async () => {
     try {
@@ -15,6 +17,14 @@ function Dashboard() {
     }
   };
 
+  const fetchGreet = async () => {
+    try {
+      const { data } = await fetchGreet();
+      setGreet(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -39,6 +49,7 @@ function Dashboard() {
         <p>Neg ${users?.probability?.neg.toFixed(2)}</p>
         <p>Neg ${users?.probability?.pos.toFixed(2)}</p>
         <p>Neg ${users?.probability?.neutral.toFixed(2)}</p>
+        <p>{greet}</p>
       </div>
     </div>
   );
