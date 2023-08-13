@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import UserRecord from "../UserRecord/UserRecord";
 import { getAllUsers } from "../../api/Requests";
+import { useAuthContext } from "@asgardeo/auth-react";
 
 function Dashboard() {
   const [users, setUsers] = useState(null);
-
+  const { signOut } = useAuthContext();
   const fetchUsers = async () => {
     try {
       const { data } = await getAllUsers();
@@ -20,6 +20,16 @@ function Dashboard() {
   }, []);
   return (
     <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          padding: "1rem",
+          marginBottom: "0.7rem",
+        }}
+      >
+        <button onClick={() => signOut()}>Signout</button>
+      </div>
       <p style={{ background: "#ccc", margin: "auto", padding: "1rem" }}>
         Label {users?.label}
       </p>
