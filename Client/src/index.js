@@ -13,7 +13,7 @@ const config = {
 };
 const el = document.getElementById("root");
 const root = ReactDom.createRoot(el);
-
+// wow
 root.render(
   <AuthProvider config={config}>
     <BrowserRouter>
