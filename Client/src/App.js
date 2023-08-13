@@ -5,22 +5,11 @@ import Login from "./Components/Login/Login";
 import { useAuthContext } from "@asgardeo/auth-react";
 
 function App() {
-  const { state } = useAuthContext();
   return (
     <div>
       <Routes>
-        <Route
-          path="/login"
-          element={
-            state?.isAuthenticated ? <Navigate to="/dashboard" /> : <Login />
-          }
-        ></Route>
-        <Route
-          path="/dashboard"
-          element={
-            state?.isAuthenticated ? <Dashboard /> : <Navigate to="/login" />
-          }
-        ></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/" element={<Navigate to="/login" />}></Route>
       </Routes>
     </div>
